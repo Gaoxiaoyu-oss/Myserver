@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<web>
+    <servlet>
+        <servlet-name>user</servlet-name>
+        <servlet-value>com.gxy.web.UserServlet</servlet-value>
+    </servlet>
+    <servlet>
+        <servlet-name>emp</servlet-name>
+        <servlet-value>com.gxy.web.EmpServlet</servlet-value>
+    </servlet>
+    <servlet>
+        <servlet-name>dept</servlet-name>
+        <servlet-value>com.gxy.web.DeptServlet</servlet-value>
+    </servlet>
+</web>
