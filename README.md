@@ -19,3 +19,6 @@
     具体的做法可以通过解析web.xml文件来将servelt-name 和 servlet-value存储到map中，然后根据传入的请求地址，在map中获取servlet-value,然后利用反射创建具体的servlet对象     再返回。
 
   4.接收客户端请求的线程以及向客户端返回信息的线程：
+    a.接收来自客户端的消息
+    b.每次接收到客户端的消息后，都要创建新的HttpRequest，HttpResponse对象
+    c.每次收到消息后要对消息字符串进行解析，解析获得请求的path获取相应的HttpServlet对象，获得请求参数键值对后要存储在HttpRequest的Map中。然后调用相应HttpServlet对象的service方法开始服务: httpServlet.service(httpRequest,httpResponse);
